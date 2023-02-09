@@ -34,8 +34,10 @@ async def start(bot, message):
             text = "HOME['HomeA']", lang_code = lang_code, order=2121 if message.chat.id not in dm.ADMINS else 21221,
             button = "HOME['HomeACB']" if message.chat.id not in dm.ADMINS else "HOME['HomeAdminCB']"
         )
-        await message.reply_text(
-            text = "السلام عليكم "
+        await message.reply_photo(
+            photo = images.WELCOME_PIC,
+            caption = tTXT.format(
+                message.from_user.mention, myID[0].mention
             ),
             reply_markup = tBTN
         )
