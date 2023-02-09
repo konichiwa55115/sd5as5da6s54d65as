@@ -69,7 +69,7 @@ class settings(object):
     CONVERT_API = os.environ.get("CONVERT_API", "SEHsLraK9h2kJTuc")
     
     # set maximum file size for preventing overload (Optional)
-    MAX_FILE_SIZE = os.environ.get("MAX_FILE_SIZE", 999999999999999999999999999999999999999999999999999999999)
+    MAX_FILE_SIZE = int(9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999)
     
     # default name, caption, lang [if needed]
     DEFAULT_NAME = os.environ.get("DEFAULT_NAME", False)
