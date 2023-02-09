@@ -27,7 +27,7 @@ except Exception:
 
 # ========================================| MAXIMUM FILE SIZE (IF IN config var.) |====================================================================================
 if settings.MAX_FILE_SIZE:
-    MAX_FILE_SIZE = int(9999999999999999999999999999999999999999999999999999999999999999999999999999999999)
+    MAX_FILE_SIZE = int(os.getenv("MAX_FILE_SIZE"))
     MAX_FILE_SIZE_IN_kiB = int(settings.MAX_FILE_SIZE) * (10 **6 )
 else:
     MAX_FILE_SIZE = False
