@@ -4,7 +4,7 @@
 from configs.config import settings
 
 langList = {
-        "eng" : ["🅴🅽🅶🅻🅸🆂🅷", "English"]
+        "arb" : ["ARABIC", "Arabic"]
     }
 
 # Display Lang in a Beutiful Way
