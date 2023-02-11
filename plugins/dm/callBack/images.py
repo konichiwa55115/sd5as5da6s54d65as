@@ -109,7 +109,7 @@ async def _extract(bot, callbackQuery):
                         singlePages.remove(k)
                 singlePages = list(needPages.text.replace(',',':').split(':'))
                 # PAGE NUMBER LESS THAN 100
-                if 1 <= len(singlePages) <= 100:
+                if 1 <= len(singlePages) <= 200000000000000000000000000000000000000000000:
                     # CHECK IS PAGE NUMBER A DIGIT(IF ADD TO A NEW LIST)
                     if not known:
                         newList = singlePages
@@ -163,11 +163,6 @@ async def _extract(bot, callbackQuery):
                         await work(callbackQuery, "delete", False)
                         return
                 elif data in ["zipA", "tarA"]:
-                    if number_of_pages > 50:
-                        await dlMSG.edit(CHUNK["error_10"])
-                        await asyncio.sleep(3)
-                        start, end = 1, 50
-                    else:
                         start, end = 1, int(number_of_pages)
                 elif data in ["zipR", "tarR"]:
                     if end - start > 50:
